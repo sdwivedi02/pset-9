@@ -188,6 +188,26 @@ return false;	// default return value to ensure compilation
 	public int clumps(ArrayList<String> values) {
 		// write your code here
 
-		return -1;		// default return value to ensure compilation
+		if (values == null) {
+			return -1;
+		}
+		for (int i = 0; i < values.size(); i++) {
+			if (values.get(i) == null) {
+				return -1;
+			}
+		}
+
+		boolean clumps = false;
+		int count = 0;
+		for (int i = 0; i < values.size() - 1; i++) {
+			if (values.get(i).equals(values.get(i + 1)) && !clumps) {
+				clumps = true;
+				count++;
+			} else if (!values.get(i).equals(values.get(i + 1))) {
+				clumps = false;
+			}
+		}
+
+		return count;		// default return value to ensure compilation
 	}
 }
