@@ -127,7 +127,19 @@ public class Exercises {
 			                }
 			            }
 			        }
-			       
+							counter = 0;
+				        for (int i = 0; i < 3; i++) {
+				            counter = 0;
+				            for (int j = i; j < numbers.size(); j += 3) {
+				                if (numbers.get(j) == x) {
+				                    counter++;
+				                }
+				            }
+				            if (counter == numbers.size() / 3) {
+				                return true;
+				            }
+				        }
+				        return false;       
 		}	// default return value to ensure compilation
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
