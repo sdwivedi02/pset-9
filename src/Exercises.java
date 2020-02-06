@@ -162,6 +162,26 @@ return false;	// default return value to ensure compilation
 	public boolean balance(ArrayList<Integer> numbers) {
 		// write your code here
 
+		if (numbers == null || numbers.size() < 2) {
+			return false;
+		}
+
+		for (int i = 0; i < numbers.size() - 1; i++) {
+			int firstHalfSum = 0;
+			int secondHalfSum = 0;
+
+			for (int j = i; j >= 0; j--) {
+				firstHalfSum += numbers.get(j);
+			}
+
+			for (int k = i + 1; k < numbers.size(); k++) {
+				secondHalfSum += numbers.get(k);
+			}
+
+			if (firstHalfSum == secondHalfSum) {
+				return true;
+			}
+		}
 		return false;	// default return value to ensure compilation
 	}
 
