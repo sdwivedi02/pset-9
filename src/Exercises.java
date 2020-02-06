@@ -12,14 +12,7 @@ public class Exercises {
         return false;
 	}
 
-		// write your code here
-
-		return false;	// default return value to ensure compilation
-	}
-
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
-		// write your code here
-
 		if (values == null || values.size() < n || n < 0) {
 				 ArrayList<String> empty = new ArrayList<String>();
 				 return empty;
@@ -32,21 +25,17 @@ public class Exercises {
 					 newArray.add(values.get(i));
 			 }
 	 return newArray;
- 		}	// default return value to ensure compilation
+ 		}
 
 	public int difference(ArrayList<Integer> numbers) {
-		// write your code here
-
 		if (numbers == null || numbers.size() < 1) {
 			return -1;
 		}
 
-		return Collections.max(numbers) - Collections.min(numbers);		// default return value to ensure compilation
+		return Collections.max(numbers) - Collections.min(numbers);
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
-		// write your code here
-
 		if (numbers == null || numbers.size() % 2 == 0 || numbers.size() < 3) {
 			return -1;
 		}
@@ -61,12 +50,10 @@ public class Exercises {
 		result.add(numbers.get((numbers.size() - 1) / 2));
 		result.add(numbers.get(numbers.size() - 1));
 
-		return Collections.max(result);		// default return value to ensure compilation
+		return Collections.max(result);
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
-		// write your code here
-
 		if (values == null || values.size() < 3 || values.size() % 2 == 0) {
 	        ArrayList<String> empty = new ArrayList<String>();
             return empty;
@@ -78,12 +65,10 @@ public class Exercises {
         result.add(first);
         result.add(middle);
         result.add(last);
-        return result; 	// default return value to ensure compilation
+        return result;
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
-		// write your code here
-
 		if (numbers == null || numbers.size() < 3) {
 					 return false;
 			 }
@@ -92,12 +77,10 @@ public class Exercises {
 							 return true;
 					 }
 			 }
-			 return false;	// default return value to ensure compilation
+			 return false;
 	}
 
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
-		// write your code here
-
 		if (numbers == null || numbers.size() < 1) {
             return false;
         }
@@ -140,11 +123,9 @@ public class Exercises {
 				            }
 				        }
 				        return false;
-		}	// default return value to ensure compilation
+		}
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
-		// write your code here
-
 		if (numbers == null || numbers.size() < 3) {
 	return false;
 }
@@ -156,12 +137,10 @@ for (int i = 0; i < numbers.size() - 2; i++) {
 	}
 }
 
-return false;	// default return value to ensure compilation
+return false;
 	}
 
 	public boolean balance(ArrayList<Integer> numbers) {
-		// write your code here
-
 		if (numbers == null || numbers.size() < 2) {
 			return false;
 		}
@@ -182,12 +161,10 @@ return false;	// default return value to ensure compilation
 				return true;
 			}
 		}
-		return false;	// default return value to ensure compilation
+		return false;
 	}
 
 	public int clumps(ArrayList<String> values) {
-		// write your code here
-
 		if (values == null) {
 			return -1;
 		}
@@ -208,6 +185,6 @@ return false;	// default return value to ensure compilation
 			}
 		}
 
-		return count;		// default return value to ensure compilation
+		return count;
 	}
 }
