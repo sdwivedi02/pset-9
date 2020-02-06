@@ -107,7 +107,27 @@ public class Exercises {
                 counter++;
             }
         }
-			
+				if (counter == numbers.size()) {
+	            return true;
+	        }
+					counter = 0;
+			        for (int i = 0; i < 2; i++) {
+			            for (int j = i; j < numbers.size(); j += 2) {
+			                if (numbers.get(j) == x) {
+			                    counter++;
+			                }
+			            }
+			            if (numbers.size() % 2 == 1 && numbers.get(0) == x && numbers.get(numbers.size() - 1) == x) {
+			                if (counter == ((numbers.size() + 1) / 2)) {
+			                    return true;
+			                }
+			            } else {
+			                if (counter == numbers.size() / 2) {
+			                    return true;
+			                }
+			            }
+			        }
+			       
 		}	// default return value to ensure compilation
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
