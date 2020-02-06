@@ -98,8 +98,17 @@ public class Exercises {
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
 		// write your code here
 
-		return false;	// default return value to ensure compilation
-	}
+		if (numbers == null || numbers.size() < 1) {
+            return false;
+        }
+				int counter = 0;
+        for (int value : numbers) {
+            if (value == x) {
+                counter++;
+            }
+        }
+			
+		}	// default return value to ensure compilation
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
 		// write your code here
