@@ -139,13 +139,24 @@ public class Exercises {
 				                return true;
 				            }
 				        }
-				        return false;       
+				        return false;
 		}	// default return value to ensure compilation
 
 	public boolean consecutive(ArrayList<Integer> numbers) {
 		// write your code here
 
-		return false;	// default return value to ensure compilation
+		if (numbers == null || numbers.size() < 3) {
+	return false;
+}
+
+for (int i = 0; i < numbers.size() - 2; i++) {
+	if ((numbers.get(i) % 2 == 0 && numbers.get(i + 1) % 2 == 0 && numbers.get(i + 2) % 2 == 0)
+			|| (numbers.get(i) % 2 == 1 && numbers.get(i + 1) % 2 == 1 && numbers.get(i + 2) % 2 == 1)) {
+		return true;
+	}
+}
+
+return false;	// default return value to ensure compilation
 	}
 
 	public boolean balance(ArrayList<Integer> numbers) {
