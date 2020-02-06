@@ -47,7 +47,21 @@ public class Exercises {
 	public double biggest(ArrayList<Double> numbers) {
 		// write your code here
 
-		return -1;		// default return value to ensure compilation
+		if (numbers == null || numbers.size() % 2 == 0 || numbers.size() < 3) {
+			return -1;
+		}
+		for (int i = 0; i < numbers.size(); i++) {
+			if (numbers.get(i) < 0) {
+				return -1;
+			}
+		}
+
+		ArrayList<Double> result = new ArrayList<Double>();
+		result.add(numbers.get(0));
+		result.add(numbers.get((numbers.size() - 1) / 2));
+		result.add(numbers.get(numbers.size() - 1));
+
+		return Collections.max(result);		// default return value to ensure compilation
 	}
 
 	public ArrayList<String> middle(ArrayList<String> values) {
