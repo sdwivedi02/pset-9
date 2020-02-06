@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Exercises {
+public class Exercises { 
 
  public boolean commonEnd(ArrayList < Integer > a, ArrayList < Integer > b) {
   if (a == null || a.isEmpty() || b == null || b.isEmpty()) {
