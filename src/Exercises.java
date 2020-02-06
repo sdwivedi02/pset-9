@@ -33,12 +33,15 @@ public class Exercises {
 			 }
 	 return newArray;
  		}	// default return value to ensure compilation
-	}
 
 	public int difference(ArrayList<Integer> numbers) {
 		// write your code here
 
-		return -1;		// default return value to ensure compilation
+		if (numbers == null || numbers.size() < 1) {
+			return -1;
+		}
+
+		return Collections.max(numbers) - Collections.min(numbers);		// default return value to ensure compilation
 	}
 
 	public double biggest(ArrayList<Double> numbers) {
