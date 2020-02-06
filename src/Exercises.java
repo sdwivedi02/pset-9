@@ -20,7 +20,19 @@ public class Exercises {
 	public ArrayList<String> endsMeet(ArrayList<String> values, int n) {
 		// write your code here
 
-		return null;	// default return value to ensure compilation
+		if (values == null || values.size() < n || n < 0) {
+				 ArrayList<String> empty = new ArrayList<String>();
+				 return empty;
+			 }
+		 ArrayList<String> newArray = new ArrayList<String>();
+		 for (int i = 0; i < n; i++) {
+				 newArray.add(values.get(i));
+		 }
+			 for (int i = (values.size() - n); i < values.size(); i++) {
+					 newArray.add(values.get(i));
+			 }
+	 return newArray;
+ 		}	// default return value to ensure compilation
 	}
 
 	public int difference(ArrayList<Integer> numbers) {
